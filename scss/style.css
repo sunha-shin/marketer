@@ -215,8 +215,8 @@ body {
     flex-wrap: wrap;
     justify-content: center; }
     .sponsors .container img {
-      width: 154px;
-      height: 70px;
+      max-width: 154px;
+      max-height: 70px;
       margin: 10px 23px;
       opacity: 0.5;
       transition: 0.3s; }
@@ -295,7 +295,6 @@ body {
 
 .client {
   background: #3498db;
-  width: 1903px;
   margin: 0 -15px;
   padding: 85px 0; }
   .client .title {
@@ -425,17 +424,20 @@ body {
       flex-direction: column;
       padding: 0 15px;
       color: #656565; }
-      .difference .container .desc p {
+      .difference .container .desc .item a {
+        padding: 14px 20px; }
+        .difference .container .desc .item a span {
+          margin: 0 0 0 14px;
+          color: #656565;
+          font-weight: 500; }
+      .difference .container .desc .item .blue-bar {
+        border-bottom: 3px solid #3498db;
+        padding: 7px 20px; }
+      .difference .container .desc .item p {
         color: #7c8595;
         padding: 14px 20px;
         line-height: 24px; }
-      .difference .container .desc a {
-        padding: 14px 20px; }
-      .difference .container .desc span {
-        margin: 0 0 0 14px;
-        color: #656565;
-        font-weight: 500; }
-      .difference .container .desc i {
+      .difference .container .desc .item i {
         font-size: 20px;
         color: #656565; }
 
@@ -634,6 +636,12 @@ body {
   justify-content: space-between; }
   .working-process .grid .grid-item {
     padding: 60px 15px 0; }
+    .working-process .grid .grid-item .img-border {
+      border: 2px dashed #ddd;
+      border-radius: 50%;
+      overflow: hidden; }
+      .working-process .grid .grid-item .img-border img {
+        margin: 5px; }
     .working-process .grid .grid-item h3 {
       font-size: 18px;
       margin: 20px 0 15px;
@@ -660,21 +668,28 @@ body {
       line-height: 36px;
       font-weight: 400;
       color: #fff; }
-    .news-letter .info .form label .email {
-      text-transform: uppercase;
+    .news-letter .info .form .inputbox {
+      border: 1px solid #fff;
       border-radius: 5px;
-      border-right: 1px solid #fff;
-      margin: 0 10px 0 0;
-      padding: 0 28.3594px;
       width: 400px;
       height: 56px;
-      background-color: transparent;
       max-width: 400px;
-      line-height: 56px; }
-      .news-letter .info .form label .email::placeholder {
-        color: #fff;
-        font-size: 16px;
-        text-transform: capitalize; }
+      margin: 0 10px 0 0;
+      padding: 0 28.3594px; }
+      .news-letter .info .form .inputbox .email {
+        text-transform: uppercase;
+        line-height: 56px;
+        border: none;
+        background: none;
+        width: 100%;
+        height: 100%;
+        display: block; }
+        .news-letter .info .form .inputbox .email:focus {
+          outline: 0; }
+        .news-letter .info .form .inputbox .email::placeholder {
+          color: #fff;
+          font-size: 16px;
+          text-transform: capitalize; }
     .news-letter .info .form .start {
       text-transform: uppercase; }
     .news-letter .info .form p {
@@ -788,25 +803,19 @@ body {
       text-align: center;
       justify-content: center;
       display: flex; }
-      .footer .footer-bottom .top-button button {
-        border-radius: 5px;
-        border-color: #999;
-        background: transparent;
-        width: 26px;
-        height: 26px;
-        padding: 14px 20px;
-        color: #fff;
-        cursor: pointer;
-        font-size: 14px;
-        font-weight: bold;
+      .footer .footer-bottom .top-button a {
+        width: 40px;
+        height: 40px;
         display: flex;
         justify-content: center;
         align-items: center;
-        transition: 0.3s;
-        border-style: solid; }
-        .footer .footer-bottom .top-button button:hover {
-          border-color: #999;
-          background: #346cdb; }
+        color: #FFFFFF;
+        border-radius: 5px;
+        border: 1px solid #999;
+        transition: 0.3s; }
+        .footer .footer-bottom .top-button a:hover {
+          background: #346cdb;
+          border: 1px solid #346cdb; }
     .footer .footer-bottom .follow {
       flex: 5;
       text-align: right;
