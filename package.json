@@ -3,15 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "devDependencies": {
-    "@parcel/transformer-sass": "^2.0.0-rc.0",
-    "gulp": "^4.0.2",
-    "gulp-sass": "^5.0.0",
-    "node-sass": "^6.0.1"
-  },
   "scripts": {
-    "dev" : "parcel index.html",
-    "build":"parcel build index.html"
+    "build": "eleventy",
+    "start": "netlify dev"
   },
   "repository": {
     "type": "git",
@@ -23,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/sunha-shin/marketer/issues"
   },
-  "homepage": "https://github.com/sunha-shin/marketer#readme"
+  "homepage": "https://github.com/sunha-shin/marketer#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "html-minifier": "^4.0.0",
+    "node-sass": "^6.0.1"
+  }
 }
